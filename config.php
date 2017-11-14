@@ -6,13 +6,13 @@ define("CONFIG", [
 
     // Application
     "site_path" => "Edvinas/Codename-mordor",
-    "site_title" => "µFrame",
+    "site_title" => "Mordor",
 
     // Database
-    "use_database" => false,
+    "use_database" => true,
 
     "db_hostname" => "localhost",
     "db_username" => "root",
     "db_password" => "",
-    "db_name" => "uframe",
+    "db_name" => "mordor",
 ]);
