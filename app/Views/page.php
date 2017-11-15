@@ -9,16 +9,24 @@
 </head>
 <body>
 <div class="container-fluid header">
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <h1 class="display-3"><?= CONFIG['site_title']; ?></h1>
-                <p class="lead">A good place to start with PHP MVC</p><br/>
-                <a class="btn btn-sm btn-outline-light" href="/<?= CONFIG['site_path']; ?>">Home</a>
-                <a class="btn btn-sm btn-outline-light" href="/<?= CONFIG['site_path']; ?>/Home/hello">Hello world</a>
+    <header>
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="container-fluid">
+                        <div class="col-8">
+                            <div class="navbar-brand">
+                                <h1 class="display-3"><?= CONFIG['site_title']; ?></h1>
+                            </div>
+                        </div>
+                        <div class="menu">
+                                 <?php uFrame\Menu::show(); ?>
+                        </div>
+                    </div>          
+                </nav>
             </div>
         </div>
-    </div>
+    </header>
     <div class="container">
         <div class="row">
             <div class="col content">
