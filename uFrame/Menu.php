@@ -14,7 +14,13 @@ class Menu
 		$menuList = $db->select("SELECT * FROM pages");
 
 		foreach ($menuList as $page) {
-			echo "<a class='btn btn-outline-light' href='/" . CONFIG['site_path'] . "/" . $page['title'] . "'>" . $page['title'] . "</a>";
+
+			if ($page['isRealPage']){
+			echo "<a class='btn btn-outline-light' href='/" . CONFIG['site_path'] . "/". $page['title'] . "'>". $page['title'] . "</a>";
+		} else {
+				echo "<a class='btn btn-outline-light' href='/" . CONFIG['site_path'] . "/Page/show/" . $page['title'] . "'>". $page['title'] . "</a>";
+			}
+
 		}
 	}
 
